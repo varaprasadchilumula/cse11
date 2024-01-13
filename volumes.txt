@@ -1,0 +1,21 @@
+
+Current date:  2024-01-14
+Width = 205.0
+Aspect ratio of the tire is = 60.0
+Diameter of the wheel is = 15.0
+Volume of the tire is = 39.92
+Current date:  2024-01-14
+Width = 185.0
+Aspect ratio of the tire is = 50.0
+Diameter of the wheel is = 14.0
+Volume of the tire is = 24.09
+Current date:  2024-01-14
+Width = 185.0
+Aspect ratio of the tire is = 50.0
+Diameter of the wheel is = 14.0
+Volume of the tire is = 24.09
+Current date:  2024-01-14
+Width = 205.0
+Aspect ratio of the tire is = 60.0
+Diameter of the wheel is = 15.0
+Volume of the tire is = 39.92
