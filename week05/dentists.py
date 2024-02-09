@@ -2,65 +2,56 @@
 
 import csv
 
+# Indexes of some of the columns
+# in the dentists.csv file.
+COMPANY_NAME_INDEX = 0
+NUM_EMPS_INDEX = 3
+NUM_PATIENTS_INDEX = 4
+
 
 def main():
-    # Indexes of some of the columns
-    # in the dentists.csv file.
-    COMPANY_NAME_INDEX = 0
-    ADDRESS_INDEX = 1
-    PHONE_NUMBER_INDEX = 2
+    # Open a file named dentists.csv and store a reference
+    # to the opened file in a variable named dentists_file.
+    with open("dentists.csv", "rt") as dentists_file:
 
-    # Read the contents of a CSV file named dentists.csv
-    # into a dictionary named dentists. Use the phone
-    # numbers as the keys in the dictionary.
-    dentists = read_dict("dentists.csv", PHONE_NUMBER_INDEX)
+        # Use the csv module to create a reader
+        # object that will read from the opened file.
+        reader = csv.reader(dentists_file)
 
-    # Print the dentists dictionary.
-    print(dentists)
-
-
-def read_dict(filename, key_column_index):
-    """Read the contents of a CSV file into a dictionary
-    and return the dictionary.
-
-    Parameters
-        filename: the name of the CSV file to read.
-        key_column_index: the index of the column
-            to use as the keys in the dictionary.
-    Return: a dictionary that contains
-        the contents of the CSV file.
-    """
-    # Create an empty dictionary that will
-    # store the data from the CSV file.
-    dictionary = {}
-
-    # Open the CSV file for reading and store a reference
-    # to the opened file in a variable named csv_file.
-    with open(filename, "rt") as csv_file:
-
-        # Use the csv module to create a reader object
-        # that will read from the opened CSV file.
-        reader = csv.reader(csv_file)
-
-        # The first line of the CSV file contains column
-        # headings and not information, so this statement
-        # skips the first line of the CSV file.
+        # The first row of the CSV file contains column
+        # headings and not data about a dental office,
+        # so this statement skips the first row of the
+        # CSV file.
         next(reader)
 
-        # Read the rows in the CSV file one row at a time.
+        running_max = 0
+        most_office = None
+
+        # Read each row in the CSV file one at a time.
         # The reader object returns each row as a list.
-        for row in reader:
+        for row_list in reader:
 
-            # From the current row, retrieve the data
-            # from the column that contains the key.
-            key = row[key_column_index]
+            # For the current row, retrieve the
+            # values in columns 0, 3, and 4.
+            company = row_list[COMPANY_NAME_INDEX]
+            num_employees = int(row_list[NUM_EMPS_INDEX])
+            num_patients = int(row_list[NUM_PATIENTS_INDEX])
 
-            # Store the data from the current row
-            # into the dictionary.
-            dictionary[key] = row
+            # Compute the number of patients per
+            # employee for the current dental office.
+            patients_per_emp = num_patients / num_employees
 
-    # Return the dictionary.
-    return dictionary
+            # If the current dental office has more
+            # patients per employee than the running
+            # maximum, assign running_max and most_office
+            # to be the current dental office.
+            if patients_per_emp > running_max:
+                running_max = patients_per_emp
+                most_office = company
+
+    # Print the results for the user to see.
+    print(f"{most_office} has {running_max:.1f}"
+            " patients per employee")
 
 
 # Call main to start this program.
