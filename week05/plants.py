@@ -3,14 +3,14 @@
 def main():
     # Read the contents of a text file
     # named plants.txt into a list.
-    text_list = read_list("plants.txt")
+    text_list = read_list("week05/plants.txt")
 
     # Print the entire list.
     print(text_list)
 
 
 def read_list(filename):
-    """Read the contents of a text file into a list and
+    """Read the contents of a text file into a list ands
     return the list. Each element in the list will contain
     one line of text from the text file.
 
@@ -23,7 +23,7 @@ def read_list(filename):
 
     # Open the text file for reading and store a reference
     # to the opened file in a variable named text_file.
-    with open("plants.txt", "rt") as text_file:
+    with open("week05/plants.txt", "rt") as text_file:
 
         # Read the contents of the text
         # file one line at a time.

@@ -5,7 +5,7 @@ import csv
 def main():
     # Open the CSV file for reading and store a reference
     # to the opened file in a variable named csv_file.
-    with open("hymns.csv", "rt") as csv_file:
+    with open("week05/hymns.csv", "rt") as csv_file:
 
         # Use the csv module to create a reader object
         # that will read from the opened CSV file.

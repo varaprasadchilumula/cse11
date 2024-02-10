@@ -19,10 +19,10 @@ def main():
     # Read the contents of a CSV file named students.csv
     # into a dictionary named students_dict. Use the I-Number
     # as the key in the dictionary.
-    students_dict = read_dict("students.csv", I_NUMBER_INDEX)
+    students_dict = read_dict("week05/students.csv", I_NUMBER_INDEX)
 
     # Get an I-Number from the user.
-    inumber = input("Please enter an I-Number (xx-xxx-xxxx): ")
+    inumber = input("Please enter an I-Number (751766201): ")
 
     # The I-Numbers are stored in the CSV file as digits only (without
     # any dashes), so we remove all dashes from the user's input.
