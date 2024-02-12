@@ -1,0 +1,40 @@
+CSE 111 Proposal for a Student Chosen Program
+
+1. What is the title of your program?
+   To Do List
+
+2. What real-world problem will your program address or help to solve?
+   I always have problems to easily organize my tasks, sometimes I have to share these tasks with others, as for work or sometimes with my family, all the apps. I have tried haven't helped me so much to solve this problem.
+
+3. What will you learn from developing this program?
+   I will learn how to use MySQL with Python, I don't know SQL language so I will have a lot to learn.
+
+4. What Python modules will your program use?
+   I'm not sure if the MySQL Python connector is a module, but I will be using it.
+
+
+5. List the names of functions you will need?
+    Functions I can think about at this point:
+    - Add task
+    - Edit task 
+    - Delete task
+    - Completed task
+
+6. List the names of the test functions you will write.
+   I'm not sure how I will do it, because I don't if using MySQL will make a difference when testing it, but I will do it.
+
+
+
+
+1. Documentation I've used:
+    - https://dev.mysql.com/doc/connector-python/en/ (Links to an external site.)
+    -
+https://www.youtube.com/watch?v=3vsC05rxZ8c&ab_channel=TechWithTim (Links to an external site.)
+
+https://www.youtube.com/watch?v=ER8oKX5myE0&ab_channel=freeCodeCamp.org (Links to an external site.)
+
+2. For this week I was working in understanding how SQL, MySQL work and how MySQL can be used with Python, I was able to:
+    - Create the database
+    - Create tables
+    - Add new tasks to the database
+
